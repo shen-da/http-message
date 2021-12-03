@@ -1,0 +1,21 @@
+{
+  "name": "loner/http-message",
+  "description": "http 消息，包含 http 请求响应及其组件。",
+  "type": "library",
+  "require": {
+    "php": "^8.0",
+    "psr/http-message": "^1.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "shen-da",
+      "email": "747472991@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Loner\\Http\\Message\\": "src/"
+    }
+  }
+}
