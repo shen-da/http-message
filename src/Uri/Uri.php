@@ -35,7 +35,7 @@ class Uri implements UriInterface
      *
      * @var string
      */
-    private static string $charUnreserved = '\w-.~';
+    private static string $charUnreserved = '\w\-.~';
 
     /**
      * 用户信息、查询字符串和片段中使用的子分隔符
@@ -232,7 +232,7 @@ class Uri implements UriInterface
      * 返回具有指定方案的实例
      *
      * @param string $scheme
-     * @return \Loner\Http\Message\Uri
+     * @return static
      * @throws InvalidArgumentException
      */
     public function withScheme($scheme): self
