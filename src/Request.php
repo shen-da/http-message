@@ -6,13 +6,14 @@ namespace Loner\Http\Message;
 
 use InvalidArgumentException;
 use Psr\Http\Message\{RequestInterface, StreamInterface, UriInterface};
+use Stringable;
 
 /**
  * http 客户端请求
  *
  * @package Loner\Http\Message
  */
-class Request implements RequestInterface
+class Request implements RequestInterface, Stringable
 {
     use Message;
 
@@ -172,7 +173,7 @@ class Request implements RequestInterface
 
         $headers = [];
         foreach ($this->getHeaders() as $name => $header) {
-            $headers = $name . '=' . join('; ', $header);
+            $headers[] = $name . '=' . join('; ', $header);
         }
 
         return $requestLine . "\r\n" . join("\r\n", $headers) . "\r\n\r\n" . $this->getBody();

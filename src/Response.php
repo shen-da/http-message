@@ -6,13 +6,14 @@ namespace Loner\Http\Message;
 
 use InvalidArgumentException;
 use Psr\Http\Message\{ResponseInterface, StreamInterface};
+use Stringable;
 
 /**
  * http 服务端响应
  *
  * @package Loner\Http\Message
  */
-class Response implements ResponseInterface
+class Response implements ResponseInterface, Stringable
 {
     use Message;
 
