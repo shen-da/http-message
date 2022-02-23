@@ -109,7 +109,7 @@ trait Message
             return [];
         }
 
-        return $this->headerNames[$headerName];
+        return $this->headers[$headerName];
     }
 
     /**

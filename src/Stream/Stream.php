@@ -341,7 +341,7 @@ class Stream implements StreamInterface
      * @param string|null $key
      * @return mixed
      */
-    public function getMetadata(string $key = null): mixed
+    public function getMetadata($key = null): mixed
     {
         if (isset($this->stream)) {
             if (!isset($this->meta)) {
